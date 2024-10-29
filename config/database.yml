@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  username: "<%= ENV['DB_USERNAME'] || 'root' %>"
+  password: "<%= ENV['DB_PASSWORD'] || 'root' %>"
+  host:     "<%= ENV['DB_HOSTNAME'] || 'database' %>"
+  port:     "<%= ENV['DB_PORT'] || '3306' %>"
+
+development:
+  <<: *default
+  database: rails_survey_development
+
+test:
+  <<: *default
+  database: rails_survey_test
+
+production:
+  <<: *default
+  database: rails_survey_production

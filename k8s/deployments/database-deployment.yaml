@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: database-deployment          #Just a name field not used for selection or grouping
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database
+  template:
+    metadata:
+      labels:
+        app: database
+    spec:
+      containers:
+      - name: database
+        image: mysql:8.0.34
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: database-pvc-volume-mount
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: database-pvc-volume-mount
+        persistentVolumeClaim:
+          claimName: database-pvc

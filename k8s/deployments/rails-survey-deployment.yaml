@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rails-survey
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rails-survey #Pods app name (kubectl get pods -l app=survey)
+  template:
+    metadata:
+      labels:
+        app: rails-survey
+    spec:
+      containers:
+        - name: rails-survey
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              memory: "256Mi"   # Maximum memory allowed in Mebibytes
+              cpu: "500m"       # Maximum CPU allowed (500 milliCPU or 0.5 CPU Core)
+            requests:
+              memory: "128Mi"   # Initial memory request in Mebibytes
+              cpu: "250m"       # Initial CPU request (250 milliCPU or 0.25 CPU Core)
+          envFrom:
+          - configMapRef:
+              name: rails-survey

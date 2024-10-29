@@ -1,0 +1,22 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "How are you feeling today?",
+      "questionType": "SLIDER",
+      "choices": ["Very Bad", "Bad", "Fine", "Good", "Very Good"]
+    },
+    {
+      "id": 2,
+      "question": "Rate your stress level from 1-5",
+      "questionType": "DROPDOWN",
+      "choices": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": 3,
+      "question": "Any additional comments?",
+      "questionType": "TEXT",
+      "choices": null
+    }
+  ]
+}
