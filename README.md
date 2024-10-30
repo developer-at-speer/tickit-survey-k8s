@@ -5,6 +5,10 @@ This is a full-stack app for securely capturing and storing mental health survey
 
 ---
 
+## Video Demo
+
+[Video Demo](https://github.com/user-attachments/assets/684353cc-730a-40a1-aa17-31fdc3f36b24)
+
 ## Features
 
 - **Backend API**: Ruby on Rails API for handling survey submissions securely. Includes validation, AES encryption for user data and unit tests. This also supports Kubernetes deployments via minikube.  
@@ -46,3 +50,16 @@ Frontend Form
 Security
 
 For extra security, all user responses are encrypted with AES. The AES keys are stored in a different table as well. In a production platform, I would store these keys in a completely separate for an addtitional layer of security. We will also deploy this with a SSL certificate so the data stays encrypted in transit. 
+
+## Tests
+
+Backend Tests:
+
+<img width="487" alt="backend_tests" src="https://github.com/user-attachments/assets/59a26b5d-a94f-4578-8347-0be7844c71b8">
+
+Frontend Tests:
+
+<img width="531" alt="frontend_tests" src="https://github.com/user-attachments/assets/aa41d914-ce30-4979-8d1e-4dfbb4429215">
+
+
+
