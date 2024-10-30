@@ -1,7 +1,7 @@
 
 # Tickit Health Developer Assignment: Mental Health Survey Submission App
 
-This is a full-stack app for securely capturing and storing mental health survey responses, with backend API, frontend UI, and robust unit testing.
+This is a full-stack app for securely capturing and storing mental health survey responses, with backend API, frontend UI, and robust unit testing. It utilises AES encryption to secure user data and K8S for easy deployments.  
 
 ---
 
