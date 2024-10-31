@@ -17,8 +17,8 @@ This is a full-stack app for securely capturing and storing mental health survey
 
 ## Tech Stack
 
-- **Backend**: Ruby on Rails, PostgreSQL
-- **Frontend**: React with TypeScript (or Angular)
+- **Backend**: Ruby on Rails, MySQL a
+- **Frontend**: React 
 - **Testing**: RSpec (Backend), Jest (Frontend)
 
 ## Getting Started
